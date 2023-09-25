@@ -17,7 +17,7 @@ function Navbar() {
             <Image src={logodrive} alt="image" width={110} height={120} />
           </Link>
         </div>
-        <ul className="flex gap-20">
+        <ul className={navbar ?  "hidden" : "flex gap-20"}>
           <li>
             <Link href="#">Promos</Link>
           </li>

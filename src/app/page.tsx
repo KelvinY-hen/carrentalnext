@@ -1,8 +1,16 @@
 import Image from "next/image";
 import Navbar from "./components/navbar";
 import Link from "next/link";
-
+import { Lexend } from 'next/font/google'
 import cardDessert from "../../public/images/homeCarDessert.png";
+
+const lexend300 = Lexend({ 
+  weight: '300',
+  subsets: ['latin'] })
+
+const lexend800 = Lexend({ 
+    weight: '800',
+    subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -11,11 +19,11 @@ export default function Home() {
       <div>
         <div className="w-full h-96 bg-homebarcol flex px-5 py-7 ">
           <div className="w-[60%] ">
-            <h1 className=" text-2xl">UNLOCK YOUR</h1>
+            <h1 className={`text-4xl ${ lexend300.className }`}>UNLOCK YOUR</h1>
             <div className="flex">
-              <h1 className=" font-bold text-8xl">JOURNEY</h1>
-              <h1 className="">with</h1>
-              <h1 className=" text-2xl">US</h1>
+              <h1 className={`font-bold text-8xl ${ lexend800.className }`}>JOURNEY</h1>
+              <h1 className={`text-2xl ${ lexend300.className }`}>with</h1>
+              <h1 className={`text-4xl ${ lexend300.className }`}>US</h1>
             </div>
           </div>
           <div className="w-[40%] h-[100%] relative">
