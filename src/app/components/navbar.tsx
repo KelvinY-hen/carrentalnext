@@ -1,23 +1,33 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { Lexend } from "next/font/google";
 import Link from "next/link";
 import logodrive from "../../../public/images/logodrive.png";
 import burgir from "../../../public/images/burgir.png";
 import close from "../../../public/images/close.png";
 
+const lexend400 = Lexend({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
-    <div className=" w-full bg-navbarcol top-0 left-0 right-0 h-14   ">
+    <div className=" w-full bg-navbarcol top-0 left-0 right-0 h-14 ">
       {/* <div className="max-w-screen-xl mx-auto px-3 flex h-full items-center justify-between"> */}
-      <div className="justify-between h-full px-3 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+      <div className="justify-between h-full px-3 mx-auto md:items-center flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           <Link href="#">
             <Image src={logodrive} alt="image" width={110} height={120} />
           </Link>
         </div>
-        <ul className={navbar ?  "hidden" : "flex gap-20"}>
+        <ul
+          className={`${lexend400.className} ${
+            navbar ? "hidden" : "hidden lg:flex gap-20"
+          }`}
+        >
           <li>
             <Link href="#">Promos</Link>
           </li>
@@ -53,9 +63,11 @@ function Navbar() {
       </div>
       <div>
         <div
-          className={`flex-1 justify-self-center pb-3 mt-8 md:pb-0 md:mt-0
+          className={`flex-1 justify-self-center pb-3  md:pb-0 md:mt-0
         ${
-          navbar ? "p-12 md:p-0 block w-full h-screen bg-navbarcol relative z-10" : "hidden"
+          navbar
+            ? "md:p-0 p-12 block w-full h-screen bg-navbarcol relative z-50"
+            : "hidden"
         }`}
         >
           <ul className="h-screen md:h-auto items-center justify-center flex-col ">
