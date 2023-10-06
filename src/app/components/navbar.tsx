@@ -29,7 +29,7 @@ function Navbar() {
           }`}
         >
           <li>
-            <Link href="#">Promos</Link>
+            <Link href="#Offers" className="scroll-smooth">Promos</Link>
           </li>
           <li>
             <Link href="#">Booking</Link>

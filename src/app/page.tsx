@@ -16,14 +16,20 @@ import petrol from "../../public/images/petrol.png";
 import qty from "../../public/images/qty.png";
 import multiplepick from "../../public/images/multiplepick.png";
 
+const lexend200 = Lexend({
+  weight: "200",
+  subsets: ["latin"],
+});
 
-const lexend300 = Lexend({ 
-  weight: '300',
-  subsets: ['latin'] });
+const lexend300 = Lexend({
+  weight: "300",
+  subsets: ["latin"],
+});
 
-const lexend800 = Lexend({ 
-    weight: '800',
-    subsets: ['latin'] });
+const lexend600 = Lexend({
+  weight: "600",
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
@@ -32,20 +38,37 @@ export default function Home() {
       <div>
         <div className="w-full h-auto max-h-[700px] bg-homebarcol md:flex relative px-5 py-7">
           <div className="w-[50%] z-10 ">
-            <h1 className={`text-6xl xl:text-8xl text-white md:text-black ${ lexend300.className }`}>UNLOCK YOUR</h1>
+            <h1
+              className={`text-6xl xl:text-8xl md:text-black ${lexend200.className}`}
+            >
+              UNLOCK YOUR
+            </h1>
             <div className="flex">
-              <h1 className={`font-bold text-6xl xl:text-8xl ${ lexend800.className }`}>JOURNEY</h1>
-              <h1 className={`text-2xl xl:text-4xl ${ lexend300.className }`}>with</h1>
-              <h1 className={`text-6xl xl:text-8xl ${ lexend300.className }`}>US</h1>
+              <h1
+                className={`font-bold text-6xl xl:text-8xl ${lexend600.className}`}
+              >
+                JOURNEY
+              </h1>
+              <h1 className={`text-2xl xl:text-4xl ${lexend300.className}`}>
+                <br/>
+                with
+              </h1>
             </div>
+            <h1 className={`text-6xl xl:text-8xl ${lexend200.className}`}>
+              US
+            </h1>
           </div>
-          <div className=" aspect-square brightness-50 md:brightness-100 md:w-[50%] md:block  absolute md:relative">
-            <Image src={cardDessert} alt="car dessert" fill className="rounded" />
+          <div className="aspect-square invisible lg:visible md:brightness-100 md:w-[50%] md:block  absolute md:relative">
+            <Image
+              src={cardDessert}
+              alt="car dessert"
+              fill
+              className="rounded"
+            />
           </div>
         </div>
         <main className="flex flex-col items-center justify-between p-24">
-          
-          <div className="w-full h-full bg-amber-100">
+          <div className="w-screen h-full max-h-[700px] bg-[#EDE6DC] md:flex relative px-5 py-7 ">
             <div className="flex justify-between p-10 gap-5">
               <div className="w-[70%]">
                 <div className="flex items-center">
@@ -68,7 +91,11 @@ export default function Home() {
                     </div>
                     <div className="w-[40%]">
                       <div className="flex gap-3 align-baseline">
-                        <Image src={multiplepick} alt="multiplepick" width={30}/>
+                        <Image
+                          src={multiplepick}
+                          alt="multiplepick"
+                          width={30}
+                        />
                         <h3>Multiple Pick-up Locations</h3>
                       </div>
                       <br />
@@ -108,43 +135,52 @@ export default function Home() {
               </div>
               <div className="w-[30%] flex flex-col gap-5 my-10">
                 <div>
-                  <h2 className=" text-4xl font-bold">Offers</h2>
+                  <h2 id="Offers" className="text-4xl font-bold">
+                    Offers
+                  </h2>
                 </div>
                 <div className="flex flex-col gap-5 mt-10 justify-center align-baseline">
-                  <div className="w-fit py-3 px-7 flex gap-5 bg-white justify-center">
-                    <div>
-                      <Image src={saleTag} alt="offers" />
+                  <Link href="#Offers">
+                    <div className="py-3 px-7 flex gap-5 bg-white justify-center hover:overflow-hidden ">
+                      <div>
+                        <Image src={saleTag} alt="offers" />
+                      </div>
+                      <div>
+                        <h2 className=" font-bold">15% off</h2>
+                        <p>For first-time users</p>
+                      </div>
                     </div>
-                    <div>
-                      <h2 className=" font-bold">15% off</h2>
-                      <p>For first-time users</p>
+                  </Link>
+                  <Link href="#Offers">
+                    <span className="absolute left-0 w-full h-0 transition-all "></span>
+                    <div className="py-3 px-7 flex gap-5 bg-white justify-center">
+                      <div>
+                        <Image src={saleTag} alt="offers" />
+                      </div>
+                      <div>
+                        <h2 className=" font-bold">10% off</h2>
+                        <p>2+ days reservation</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="  py-3 px-7 flex gap-5 bg-white justify-center">
-                    <div>
-                      <Image src={saleTag} alt="offers" />
+                  </Link>
+                  <Link href="#Offers">
+                    <div className="py-3 px-7 flex gap-5 bg-white justify-center">
+                      <div>
+                        <Image src={saleTag} alt="offers" />
+                      </div>
+                      <div>
+                        <h2 className="font-bold">20% off</h2>
+                        <p>With student card!</p>
+                      </div>
                     </div>
-                    <div>
-                      <h2 className=" font-bold">10% off</h2>
-                      <p>2+ days reservation</p>
-                    </div>
-                  </div>
-                  <div className=" py-3 px-7 flex gap-5 bg-white justify-center">
-                    <div>
-                      <Image src={saleTag} alt="offers" />
-                    </div>
-                    <div>
-                      <h2 className=" font-bold">20% off</h2>
-                      <p>With student card!</p>
-                    </div>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </main>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
