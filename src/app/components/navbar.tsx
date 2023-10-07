@@ -19,7 +19,7 @@ function Navbar() {
       {/* <div className="max-w-screen-xl mx-auto px-3 flex h-full items-center justify-between"> */}
       <div className="justify-between h-full px-3 mx-auto md:items-center flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
-          <Link href="#">
+          <Link href="/">
             <Image src={logodrive} alt="image" width={110} height={120} />
           </Link>
         </div>
@@ -35,13 +35,13 @@ function Navbar() {
             <Link href="#">Booking</Link>
           </li>
           <li>
-            <Link href="#">Support</Link>
+            <Link href="#Support">Support</Link>
           </li>
           <li>
             <Link href="#">About Us</Link>
           </li>
           <li>
-            <Link href="#">Register</Link>
+            <Link href="/signin">Sign In</Link>
           </li>
         </ul>
         <button

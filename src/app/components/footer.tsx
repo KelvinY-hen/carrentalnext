@@ -13,7 +13,7 @@ import iyoutube from "../../../public/images/icon-youtube.png";
 function Footer() {
   return (
     <div className="w-full h-full bg-black flex flex-col justify-center items-center py-14 gap-28">
-      <div className="flex gap-3">
+      <div id="Support" className="flex gap-3">
         <Link href="/facebook">
           <Image src={ifacebook} alt="facebook" />
         </Link>

@@ -38,27 +38,29 @@ export default function Home() {
       <div>
         <div className="w-full h-auto max-h-[700px] bg-homebarcol md:flex relative px-5 py-7">
           <div className="w-[50%] z-10 ">
-            <h1
-              className={`text-6xl xl:text-8xl md:text-black ${lexend200.className}`}
-            >
-              UNLOCK YOUR
-            </h1>
-            <div className="flex">
+            <div className="">
               <h1
-                className={`font-bold text-6xl xl:text-8xl ${lexend600.className}`}
+                className={`text-6xl lg:text-8xl md:text-black ${lexend200.className}`}
               >
-                JOURNEY
+                UNLOCK YOUR
               </h1>
-              <h1 className={`text-2xl xl:text-4xl ${lexend300.className}`}>
-                <br/>
-                with
+              <div className="flex">
+                <h1
+                  className={`font-bold text-6xl lg:text-8xl ${lexend600.className}`}
+                >
+                  JOURNEY
+                </h1>
+                <h1 className={`text-2xl lg:text-4xl ${lexend300.className}`}>
+                  <br />
+                  with
+                </h1>
+              </div>
+              <h1 className={`text-6xl lg:text-8xl ${lexend200.className}`}>
+                US
               </h1>
             </div>
-            <h1 className={`text-6xl xl:text-8xl ${lexend200.className}`}>
-              US
-            </h1>
           </div>
-          <div className="aspect-square invisible lg:visible md:brightness-100 md:w-[50%] md:block  absolute md:relative">
+          <div className="aspect-square invisible md:visible md:brightness-100 md:w-[50%] md:block  absolute md:relative">
             <Image
               src={cardDessert}
               alt="car dessert"
