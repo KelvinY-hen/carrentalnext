@@ -72,7 +72,7 @@ function Navbar() {
         >
           <ul className="h-screen md:h-auto items-center justify-center flex-col ">
             <li className="pb-6 text-xl py-2 md:px-6 text-center border-b-2 md:border-b-0">
-              <Link href="#" onClick={() => setNavbar(!navbar)}>
+              <Link href="#Offers" onClick={() => setNavbar(!navbar)}>
                 Promos
               </Link>
             </li>
@@ -82,7 +82,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="pb-6 text-xl py-2 md:px-6 text-center border-b-2 md:border-b-0">
-              <Link href="#" onClick={() => setNavbar(!navbar)}>
+              <Link href="#Support" onClick={() => setNavbar(!navbar)}>
                 Support
               </Link>
             </li>
@@ -92,8 +92,8 @@ function Navbar() {
               </Link>
             </li>
             <li className="pb-6 text-xl py-2 md:px-6 text-center border-b-2 md:border-b-0">
-              <Link href="#" onClick={() => setNavbar(!navbar)}>
-                Register
+              <Link href="/signin" onClick={() => setNavbar(!navbar)}>
+                Sign In
               </Link>
             </li>
           </ul>
