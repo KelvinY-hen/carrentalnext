@@ -29,13 +29,13 @@ function Navbar() {
           }`}
         >
           <li>
-            <Link href="#Offers" className="scroll-smooth">Promos</Link>
+            <Link href="/#Offers" className="scroll-smooth">Promos</Link>
           </li>
           <li>
             <Link href="#">Booking</Link>
           </li>
           <li>
-            <Link href="#Support">Support</Link>
+            <Link href="/#Support">Support</Link>
           </li>
           <li>
             <Link href="#">About Us</Link>
@@ -63,7 +63,7 @@ function Navbar() {
       </div>
       <div>
         <div
-          className={`flex-1 justify-self-center pb-3  md:pb-0 md:mt-0
+          className={`${lexend400.className} flex-1 justify-self-center pb-3  md:pb-0 md:mt-0
         ${
           navbar
             ? "md:p-0 p-12 block w-full h-screen bg-navbarcol relative z-50"
@@ -72,7 +72,7 @@ function Navbar() {
         >
           <ul className="h-screen md:h-auto items-center justify-center flex-col ">
             <li className="pb-6 text-xl py-2 md:px-6 text-center border-b-2 md:border-b-0">
-              <Link href="#Offers" onClick={() => setNavbar(!navbar)}>
+              <Link href="/#Offers" onClick={() => setNavbar(!navbar)}>
                 Promos
               </Link>
             </li>
@@ -82,7 +82,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="pb-6 text-xl py-2 md:px-6 text-center border-b-2 md:border-b-0">
-              <Link href="#Support" onClick={() => setNavbar(!navbar)}>
+              <Link href="/#Support" onClick={() => setNavbar(!navbar)}>
                 Support
               </Link>
             </li>
