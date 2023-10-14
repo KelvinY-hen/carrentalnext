@@ -69,8 +69,8 @@ export default function Home() {
             />
           </div>
         </div>
-        <main className="flex flex-col items-center justify-between p-24">
-          <div className="w-screen h-full max-h-[700px] bg-[#EDE6DC] md:flex relative px-5 py-7 ">
+        <main className="flex flex-col items-center justify-between ">
+          <div className="w-screen h-full max-h-[700px] bg-[#EDE6DC] md:flex relative px-20 py-7 ">
             <div className="flex justify-between p-10 gap-5">
               <div className="w-[70%]">
                 <div className="flex items-center">
@@ -143,7 +143,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-5 mt-10 justify-center align-baseline">
                   <Link href="#Offers">
-                    <div className="py-3 px-7 flex gap-5 bg-white justify-center hover:overflow-hidden ">
+                    <div className="py-3 max-w-[350px] flex gap-5 bg-white justify-center hover:overflow-hidden ">
                       <div>
                         <Image src={saleTag} alt="offers" />
                       </div>
@@ -155,7 +155,7 @@ export default function Home() {
                   </Link>
                   <Link href="#Offers">
                     <span className="absolute left-0 w-full h-0 transition-all "></span>
-                    <div className="py-3 px-7 flex gap-5 bg-white justify-center">
+                    <div className="py-3 max-w-[350px] flex gap-5 bg-white justify-center">
                       <div>
                         <Image src={saleTag} alt="offers" />
                       </div>
@@ -166,7 +166,7 @@ export default function Home() {
                     </div>
                   </Link>
                   <Link href="#Offers">
-                    <div className="py-3 px-7 flex gap-5 bg-white justify-center">
+                    <div className="py-3 max-w-[350px] flex gap-5 bg-white justify-center">
                       <div>
                         <Image src={saleTag} alt="offers" />
                       </div>
