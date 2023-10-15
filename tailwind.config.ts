@@ -17,6 +17,11 @@ const config: Config = {
         'navbarcol' : "#EBE8E3",
         'homebarcol': "#F5F3EF",
       },
+      screens: {
+        'mobile': {'max': '670px'},
+  
+        'tablet': {'max': '1180px'},
+      },
     },
   },
   plugins: [],

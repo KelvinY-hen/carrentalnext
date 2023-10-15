@@ -34,10 +34,10 @@ const lexend600 = Lexend({
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <div>
+      <main>
+        <Navbar />
         <div className="w-full h-auto max-h-[700px] bg-homebarcol md:flex relative px-5 py-7">
-          <div className="w-[50%] z-10 ">
+          <div className="w-[50%] z-10">
             <div className="">
               <h1
                 className={`text-6xl lg:text-8xl md:text-black ${lexend200.className}`}
@@ -69,64 +69,64 @@ export default function Home() {
             />
           </div>
         </div>
-        <main className="flex flex-col items-center justify-between ">
-          <div className="w-screen h-full max-h-[700px] bg-[#EDE6DC] md:flex relative px-20 py-7 ">
-            <div className="flex justify-between p-10 gap-5">
-              <div className="w-[70%]">
+        <div className="flex flex-col items-center justify-between relative">
+          <div className="w-full h-auto bg-[#EDE6DC] md:flex relative mobile:px-3 tablet:px-10 px-28 py-16 ">
+          <div className="flex mobile:flex-col justify-between  gap-5"></div>
+              <div className="w-[70%] mobile:w-full">
                 <div className="flex items-center">
-                  <h2 className=" text-4xl font-bold">Why Drive?</h2>
-                  <Image src={whyLogo} alt="whyLogo" />
+                  <h2 className=" text-4xl mobile:text-3xl font-bold">Why Drive?</h2>
+                  <Image src={whyLogo} alt="whyLogo" width={80} />
                 </div>
-                <div className="flex flex-col items-end py-3 gap-5">
-                  <div className="flex gap-10">
-                    <div className="w-[40%]">
+                <div className="flex flex-col items-end py-3 gap-10">
+                <div className="flex mobile:flex-col gap-10 tablet:justify-center">
+                    <div className="w-[40%] mobile:w-[100%]">
                       <div className="flex gap-3 align-baseline">
                         <Image src={lowprice} alt="lowprice" width={30} />
-                        <h3 className="">The Lowest Price</h3>
+                        <h3 className="md:tablet:text-[12px]">The Lowest Price</h3>
                       </div>
                       <br />
-                      <p>
+                      <p className=" text-justify">
                         Drive offers competitive pricing through cost-effective
                         operations, enabling affordability and quality service
                         for all customers.
                       </p>
                     </div>
-                    <div className="w-[40%]">
+                    <div className="w-[40%] mobile:w-[100%]">
                       <div className="flex gap-3 align-baseline">
                         <Image
                           src={multiplepick}
                           alt="multiplepick"
                           width={30}
                         />
-                        <h3>Multiple Pick-up Locations</h3>
+                        <h3 className="md:tablet:text-[12px]">Multiple Pick-up Locations</h3>
                       </div>
                       <br />
-                      <p>
+                      <p className=" text-justify">
                         Drive provides convenience with multiple pick-up points,
                         making it easy to start your journey from various
                         locations.
                       </p>
                     </div>
                   </div>
-                  <div className="flex gap-10">
-                    <div className="w-[40%]">
+                  <div className="flex mobile:flex-col gap-10 tablet:justify-center">
+                  <div className="w-[40%] mobile:w-[100%]">
                       <div className="flex gap-3 align-baseline">
                         <Image src={petrol} alt="petrol" width={30} />
-                        <h3>Reimburse your petrol</h3>
+                        <h3 className="md:tablet:text-[12px]">Reimburse your petrol</h3>
                       </div>
                       <br />
-                      <p>
+                      <p className=" text-justify">
                         Drive offers petrol reimbursement, putting money back in
                         your pocket while you hit the road worry-free.
                       </p>
                     </div>
-                    <div className="w-[40%]">
+                    <div className="w-[40%] mobile:w-[100%]">
                       <div className="flex gap-3 align-baseline">
                         <Image src={qty} alt="qty" width={30} />
-                        <h3>Always the Best Quality</h3>
+                        <h3 className="md:tablet:text-[12px]">Always the Best Quality</h3>
                       </div>
                       <br />
-                      <p>
+                      <p className=" text-justify">
                         Drive excels in quality with a meticulously maintained
                         fleet, rigorous inspections, and a commitment to
                         customer satisfaction.
@@ -135,15 +135,15 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-[30%] flex flex-col gap-5 my-10">
+              <div className="w-[30%] mobile:w-[100%] flex flex-col gap-5 my-10">
                 <div>
                   <h2 id="Offers" className="text-4xl font-bold">
                     Offers
                   </h2>
                 </div>
-                <div className="flex flex-col gap-5 mt-10 justify-center align-baseline">
+                <div className="flex flex-col gap-5 mt-10 justify-center align-baseline mobile:mx-auto">
                   <Link href="#Offers">
-                    <div className="py-3 max-w-[350px] flex gap-5 bg-white justify-center hover:overflow-hidden ">
+                    <div className="py-3 px-3 max-w-[350px] flex gap-5 bg-white justify-center">
                       <div>
                         <Image src={saleTag} alt="offers" />
                       </div>
@@ -180,9 +180,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </main>
-      </div>
-      <Footer />
+        <Footer />
+      </main>
     </>
   );
 }
