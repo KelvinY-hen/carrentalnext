@@ -28,12 +28,14 @@ const roboto400 = Roboto({
 function slider() {
   return (
     <>
-      <div>
+      <div className="w-full h-96 bg-[#F9F9F9]">
         <div>
-          <h3 id="popular" className={`${lexend300.className}`}>
-            Popular{" "}
-          </h3>
+          <h1 id="popular" className={`${lexend300.className}`}>
+            Popular
+          </h1>
         </div>
+        <br/>
+        <br/>
         <div>
           <Swiper
             modules={[Navigation, Pagination, Scrollbar]}
