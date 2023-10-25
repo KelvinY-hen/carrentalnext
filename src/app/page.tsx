@@ -2,10 +2,12 @@
 import Image from "next/image";
 import { Lexend } from "next/font/google";
 
+
 /// component
 import Navbar from "./components/navbar";
 import Link from "next/link";
 import Footer from "./components/footer";
+import Slider from "./components/slider";
 
 /// asset
 import cardDessert from "../../public/images/homeCarDessert.png";
@@ -69,8 +71,8 @@ export default function Home() {
             />
           </div>
         </div>
-        {/* <div>  
-<div id="default-carousel" className="relative w-full" data-carousel="slide">
+         <div>  
+{/*<div id="default-carousel" className="relative w-full" data-carousel="slide">
     <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
            <Image src={whyLogo} alt="whyLogo" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" width={80} />
@@ -112,9 +114,9 @@ export default function Home() {
             <span className="sr-only">Next</span>
         </span>
     </button>
-</div>
-
-        </div> */}
+</div>*/}
+  <Slider/>
+        </div> 
         <div className="flex flex-col items-center justify-between relative">
           <div className="w-full h-auto bg-[#EDE6DC] md:flex relative mobile:px-3 tablet:px-10 px-28 py-16 ">
           <div className="flex mobile:flex-col justify-between  gap-5"></div>
